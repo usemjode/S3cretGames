@@ -3,159 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Arcade | Play Free Browser Games</title>
+    <title>Nexus Arcade | White Outline Edition</title>
     <style>
-        /* CSS Styling */
+        :root {
+            --bg-color: #050505;
+            --card-bg: #111111;
+            --outline: #ffffff;
+            --accent: #00d4ff;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Courier New', Courier, monospace; /* Monospace for a dev/gamer feel */
             margin: 0;
-            background-color: #0f0f1b;
+            background-color: var(--bg-color);
             color: white;
         }
 
+        /* Navigation */
         header {
-            background-color: #1a1a2e;
-            padding: 1rem 5%;
+            background-color: var(--bg-color);
+            padding: 1.5rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid #30304d;
+            border-bottom: 1px solid var(--outline);
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            color: #00d4ff;
+            color: white;
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             margin-left: 20px;
-            transition: color 0.3s;
+            padding: 5px 10px;
+            border: 1px solid transparent;
         }
 
         nav a:hover {
-            color: #00d4ff;
+            border: 1px solid var(--outline);
         }
 
+        /* Hero Section */
         .hero {
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
+            padding: 80px 20px;
+            border-bottom: 1px solid var(--outline);
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
         }
 
         .btn-play {
-            background-color: #00d4ff;
-            color: #0f0f1b;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 5px;
+            background-color: transparent;
+            color: white;
+            padding: 15px 40px;
+            border: 2px solid var(--outline);
             font-weight: bold;
             cursor: pointer;
-            font-size: 1rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
         }
 
+        .btn-play:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 20px white;
+        }
+
+        /* Game Grid & Outlined Cards */
         .game-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 40px 5%;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 50px 10%;
         }
 
         .game-card {
-            background-color: #1a1a2e;
-            border-radius: 10px;
+            background-color: var(--card-bg);
+            border: 2px solid var(--outline); /* The white outline */
+            border-radius: 0px; /* Square edges look sharper for this style */
             overflow: hidden;
-            transition: transform 0.3s;
-            border: 1px solid #30304d;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
         }
 
         .game-card:hover {
-            transform: translateY(-10px);
-            border-color: #00d4ff;
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+            border-color: var(--accent); /* Optional: change color on hover */
         }
 
         .game-thumb {
             width: 100%;
-            height: 150px;
-            background-color: #30304d;
+            height: 180px;
+            border-bottom: 1px solid var(--outline);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 4rem;
+            background: linear-gradient(45deg, #000, #111);
         }
 
         .game-info {
-            padding: 15px;
+            padding: 20px;
+        }
+
+        .game-info h3 {
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+
+        .play-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--outline);
+            padding: 8px 15px;
+        }
+
+        .play-link:hover {
+            background: white;
+            color: black;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            font-size: 0.8rem;
-            color: #666;
+            padding: 40px;
+            border-top: 1px solid var(--outline);
+            margin-top: 50px;
+            opacity: 0.6;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">Nexus Arcade</div>
+        <div class="logo">[ NEXUS ]</div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Action</a>
-            <a href="#">Puzzle</a>
-            <a href="#">About</a>
+            <a href="#">GAMES</a>
+            <a href="#">STATS</a>
+            <a href="#">LOGIN</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Level Up Your Boredom</h1>
-        <p>Instant-play games. No downloads. No nonsense.</p>
-        <button class="btn-play">Featured Game: Star-Jump</button>
+        <h1>SYSTEM READY.</h1>
+        <button class="btn-play">INITIALIZE FEATURED GAME</button>
     </section>
 
     <main class="game-grid">
         <div class="game-card">
-            <div class="game-thumb">🐍</div>
+            <div class="game-thumb">🕹️</div>
             <div class="game-info">
                 <h3>Neon Snake</h3>
-                <p>The classic arcade experience with a glow-up.</p>
-                <a href="snake.html" style="color: #00d4ff;">Play Now →</a>
+                <p>Classic survival in a white-out grid.</p>
+                <a href="snake.html" class="play-link">LAUNCH</a>
             </div>
         </div>
 
         <div class="game-card">
-            <div class="game-thumb">🚀</div>
+            <div class="game-thumb">⚔️</div>
             <div class="game-info">
-                <h3>Void Runner</h3>
-                <p>High-speed dodging in deep space.</p>
-                <a href="#" style="color: #00d4ff;">Play Now →</a>
+                <h3>Grid Warrior</h3>
+                <p>Tactical combat with minimalist design.</p>
+                <a href="#" class="play-link">LAUNCH</a>
             </div>
         </div>
 
         <div class="game-card">
-            <div class="game-thumb">🧩</div>
+            <div class="game-thumb">🌌</div>
             <div class="game-info">
-                <h3>Logic Brick</h3>
-                <p>Test your brain with 50+ levels of puzzles.</p>
-                <a href="#" style="color: #00d4ff;">Play Now →</a>
+                <h3>Orbit</h3>
+                <p>Physics-based gravity puzzles.</p>
+                <a href="#" class="play-link">LAUNCH</a>
             </div>
         </div>
     </main>
 
     <footer>
-        &copy; 2026 Nexus Arcade. Built with HTML/CSS. Hosted on GitHub.
+        &copy; 2026 // HOSTED_ON_GITHUB // NO_COOKIES_NO_TRACKING
     </footer>
 
 </body>
