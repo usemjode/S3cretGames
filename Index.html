@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Arcade | Play Free Browser Games</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #0f0f1b;
+            color: white;
+        }
+
+        header {
+            background-color: #1a1a2e;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #30304d;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00d4ff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .btn-play {
+            background-color: #00d4ff;
+            color: #0f0f1b;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 5%;
+        }
+
+        .game-card {
+            background-color: #1a1a2e;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            border: 1px solid #30304d;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            border-color: #00d4ff;
+        }
+
+        .game-thumb {
+            width: 100%;
+            height: 150px;
+            background-color: #30304d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .game-info {
+            padding: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Nexus Arcade</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Action</a>
+            <a href="#">Puzzle</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Level Up Your Boredom</h1>
+        <p>Instant-play games. No downloads. No nonsense.</p>
+        <button class="btn-play">Featured Game: Star-Jump</button>
+    </section>
+
+    <main class="game-grid">
+        <div class="game-card">
+            <div class="game-thumb">🐍</div>
+            <div class="game-info">
+                <h3>Neon Snake</h3>
+                <p>The classic arcade experience with a glow-up.</p>
+                <a href="snake.html" style="color: #00d4ff;">Play Now →</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-thumb">🚀</div>
+            <div class="game-info">
+                <h3>Void Runner</h3>
+                <p>High-speed dodging in deep space.</p>
+                <a href="#" style="color: #00d4ff;">Play Now →</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-thumb">🧩</div>
+            <div class="game-info">
+                <h3>Logic Brick</h3>
+                <p>Test your brain with 50+ levels of puzzles.</p>
+                <a href="#" style="color: #00d4ff;">Play Now →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Nexus Arcade. Built with HTML/CSS. Hosted on GitHub.
+    </footer>
+
+</body>
+</html>
